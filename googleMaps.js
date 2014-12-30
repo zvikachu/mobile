@@ -16,7 +16,7 @@ $(document).ready(function(){
 } else {
 
     // because there is no webworker support, just run the function localy
-			playMusic()
+			
 			setTimeout(function() {
 				getAddress();
 			}, 5000);
