@@ -4,10 +4,10 @@ $(document).ready(function(){
 			w = new Worker("webWorker.js");
 		
 			
-			setTimeout(function() {
+		
 				w.onmessage = function(event){
 				alert (event.data);
-			}, 5000)}
+			}
 		
 		
 		
