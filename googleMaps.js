@@ -2,17 +2,11 @@ $(document).ready(function(){
 	$("#getAddressButton").click(function(){ 
 	if(typeof(Worker) !== "undefined") {
 			w = new Worker("webWorker.js");
-		
-			
-		
-				w.onmessage = function(event){
-				alert (event.data);
-			}
-		
-		
-		
-		//w.terminate();
-		//w = undefined;
+	w.onmessage = function(event){
+    alert(event.data);
+};
+		w.terminate();
+		w = undefined;
 } else {
 
     // because there is no webworker support, just run the function localy
