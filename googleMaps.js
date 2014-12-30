@@ -7,9 +7,9 @@ $(document).ready(function(){
 			setTimeout(function() {
 				w.onmessage = function(event){
 				alert (event.data);
-			}, 5000);
+			}, 5000)}
 		
-		};
+		
 		
 		//w.terminate();
 		//w = undefined;
