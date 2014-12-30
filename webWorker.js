@@ -1,9 +1,9 @@
+var i = 0;
 
-
-function worker() {
-getAddress();
-    postMessage("web worker worked");
-
+function timedCount() {
+    i = i + 1;
+    postMessage(i);
+    setTimeout("timedCount()",500);
 }
 
-worker();
+timedCount();
