@@ -1,0 +1,79 @@
+	#map-canvas { 
+	width:50%;height: 300px; margin: 0; padding: 0;
+	}
+	.contentDiv{
+		text-align:center;
+		width: 90%;
+		margin:0 auto;
+		display: flex;
+		padding-bottom:5px;
+    -webkit-box-orient: horizontal; 
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;  
+    align-items: center;
+	}
+	.carImage{
+		flex:1;
+ width:80%;
+   height:auto;
+	transition:all 1s;
+	
+	}
+	.carList{
+		flex:1;
+		
+	}
+	
+	.pageContent{
+		text-align:center;
+	}
+	.buttonClass1{
+		width:40%;
+		margin:auto;
+		padding-top:8px;
+		padding-bottom:8px;
+		margin-bottom:10px;
+		margin-top:10px;
+	}
+	.buttonClass2{
+		width:60%;
+		margin:auto;
+		padding-top:8px;
+		padding-bottom:8px;
+		margin-bottom:15px;
+		margin-top:15px;
+		background: green;
+		color: white;
+	}
+	
+	#map-canvas{
+		margin:auto;
+		padding-top:5px;
+		width:80%;
+	}
+	.div1{
+		text-align:center;
+	}
+	.glowCar{
+		color:green;
+	}
+	.carName{
+		list-style: none;
+		display:none;
+	}
+	.carName2{
+		color:tomato;
+	}
+	.biggerText{
+	font-size:20px;
+	
+	}
+

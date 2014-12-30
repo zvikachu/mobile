@@ -1,0 +1,306 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <param name="filename" value="sound.wav">
+    <param name="autostart" value="1">
+    <param name="playcount" value="true"> 
+</object>
+<meta charset="UTF-8">
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjqA7_KFPrUUmRWjMVws2_KTyZameShvk">
+    </script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+	<script src="carsArray.js"></script>
+	<script src="loginRegister.js"></script>
+	<script src="googleMaps.js"></script>
+	<script src="navBar.js"></script>
+	<link rel="stylesheet" href="styles.css" />
+
+
+</head> 
+<body> 
+
+<div data-role="page" data-theme="a" id="home">
+
+	<div data-role="header">
+		<h1>Zvi's Rentals</h1>
+	</div><!-- /header -->
+<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+	
+	
+	<div data-role="content">	
+		<p>1 build this home page</p>			
+		<p>3 put the calculator in a webworker, and play some music</p>		
+		<p>4 beautify everything</p>		
+	</div><!-- /content -->
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >© all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" data-theme="a" id="rent">
+
+  
+	<div data-role="header">
+		<h1>Rent a car</h1>
+	</div><!-- /header -->
+<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+	
+	
+	<div data-role="content" class="pageContent">	
+		<div class="contentDiv">
+			<img class="carImage" id="carImage" src="car1.jpg"/>
+			<ul class="carList">
+				<li class="carName carName2" id="car1" onclick="showCar(1)" >car1 name</li>
+				<li class="carName" id="car2" onclick="showCar(2)">car2 name</li>
+				<li class="carName" id="car3" onclick="showCar(3)">car3 name</li>
+				<li class="carName" id="car4" onclick="showCar(4)">car4 name</li>
+				<li class="carName" id="car5" onclick="showCar(5)">car5 name</li>
+				<li class="carName" id="car6" onclick="showCar(6)">car6 name</li>
+				<li class="carName" id="car7" onclick="showCar(7)">car7 name</li>
+				<li class="carName" id="car8" onclick="showCar(8)">car8 name</li>
+				<li class="carName" id="car9" onclick="showCar(9)">car9 name</li>
+				<li class="carName" id="car10" onclick="showCar(10)">car10 name</li>
+				<br><br>
+				<div class="showCarInfo" id="showCarInfo"></div>
+
+			
+			</ul>
+		
+		</div>	
+		<span id ='pleaseLogin' style='color:tomato;font-style: italic; opacity:0; font-size:14px; display:none;'><a href="#login"></a></span>
+<a data-role="button" class="buttonClass1" id="rentButton";>Choose a car</a>		
+	</div><!-- /content -->
+	
+	
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >© all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+
+
+<div data-role="page" id="login">
+
+	<div data-role="header">
+		<h1>Login / Register</h1>
+	</div><!-- /header -->
+	<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+<div data-role="content">	
+ 	<div data-role="header" data-theme="b">
+		<h1>Already got an account? Login</h1>
+	</div><!-- /header -->
+	<form>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="emailLogin">Email:</label>
+				<input type="text" name="email" id="emailLogin">
+				<span id ='emailLoginError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid email address</span>
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="passwordLogin">
+				<span id ='passLoginError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a password</span>
+			</fieldset>
+
+			<span id ='incorrectLogin' style='color:tomato;font-style: italic; opacity:0;'>Username or password incorrect</span>
+			<a data-role="button" onclick="localLogin()" class="buttonClass1">Login</a>
+ 
+		</form>
+	
+		<div data-role="header" data-theme="b">
+		<h1>No account yet? Register</h1>
+	</div><!-- /header -->
+		<form>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="name">Full name:</label>
+				<input type="text" name="username" id="name">
+				<span id ='nameRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter your name</span>
+			</fieldset>
+ 
+ 			<fieldset data-role="fieldcontain"> 
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email">
+				<span id ='emailRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid email address</span>
+			</fieldset>
+			
+			<fieldset data-role="fieldcontain"> 
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password">
+				<span id ='passRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a password</span>
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="password2">Confirm Password:</label>
+				<input type="password" name="password2" id="password2">
+				<span id ='pass2RegError' style='color:tomato;font-style: italic; opacity:0;'>passwords don't match</span>
+			</fieldset>
+ 
+
+ 
+ 			<fieldset data-role="fieldcontain"> 
+				<label for="phone">Phone:</label>
+				<input type="text" name="phone" id="phone">
+				<span id ='phoneRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid phone number</span>
+			</fieldset>
+			
+			 <fieldset data-role="fieldcontain"> 
+				<label for="mobile">Mobile:</label>
+				<input type="text" name="mobile" id="mobile">
+				<span id ='mobileRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid mobile number</span>
+			</fieldset>
+			
+			<fieldset data-role="fieldcontain"> 
+				<label for="licence">Licence No:</label>
+				<input type="text" name="licence" id="licence">
+				<span id ='licenceRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid licence number</span>
+			</fieldset>
+			
+			
+			<fieldset data-role="fieldcontain"> 
+				<label for="date">Date of Birth:</label>
+				<input type="date" name="date" id="date">
+				<span id ='dateRegError' style='color:tomato;font-style: italic; opacity:0;'>Please enter a valid birth date</span>
+			</fieldset>
+
+
+ <span id ='emailExistRegError' style='color:tomato;font-style: italic; opacity:0; font-size:18px;'>The email address you entered is already in the system, try signing in</span><br>
+ <span id ='regSuccess' style='color:tomato;font-style: italic; opacity:0; font-size:18px;'>Registration success! please wait for redirection</span>
+			
+			<a data-role="button" onclick="localRegister()" class="buttonClass1">Register</a>
+ 
+		</form>
+		
+		
+		
+		
+		
+		
+ 
+	</div><!-- /content -->
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+
+
+
+
+
+
+<div data-role="page" id="calc">
+
+
+
+	<div data-role="header">
+		<h1>Calculate Cost</h1>
+	</div><!-- /header -->
+	<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+<div data-role="content">	
+
+
+		
+	<form>
+
+			<fieldset data-role="fieldcontain"> 
+				<input type="text" name="location" id="location" placeholder="Location">
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<input type="text" name="destination" id="destination" placeholder="Destination">
+			</fieldset>
+
+		<span id ='calcResults' style='color:tomato; opacity:0;'>No results were found for your search<br>Please try again</span>
+			<a data-role="button" id="getAddressButton" class="buttonClass1">Calculate</a>
+			<div id ='distance' class="div1 biggerText">Total Trip Distance: </span><span id ='distanceValue' style='color:tomato; opacity:0; font-size:20px;'></div>
+			
+		</form>
+		<div id="displayClacResult" class="div1 biggerText" style=' opacity:0;'>diplay the calc result here</div>
+		
+		<a data-role="button"  data-theme="b" id="rentIt" class="buttonClass2" style="opacity:0; display:none;">Rent it</a>
+		<br>
+		<div id="alreadyHasCar" class="div1 biggerText" style=' opacity:0; color:tomato;'>return your car first</div>
+		<br>
+<div id="map-canvas"></div>
+</div><!-- /content -->
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >© all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+<div data-role="page" id="confirmation">
+
+
+
+	<div data-role="header">
+		<h1>Rent Confirmation</h1>
+	</div><!-- /header -->
+	<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+<div data-role="content">	
+		<div class="contentDiv">
+			<img class="carImage" id="confirmImage" src=""/>
+
+				<div class="showCarInfo carList" id="confirmCarInfo"></div>
+
+			
+		
+		</div>	
+
+		
+</div><!-- /content -->
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >© all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+<div data-role="page" id="returns">
+
+
+
+	<div data-role="header">
+		<h1>Retruns</h1>
+	</div><!-- /header -->
+	<nav data-role="navbar" class="ui-navbar navs" role="navigation"></nav>
+
+<div data-role="content">	
+
+				<div class="div1" id="returnsDiv"></div><br><br><br>
+				<a data-role="button"  data-theme="b" id="returnCar" class="buttonClass2" style="opacity:0; display:none;">Return car</a>
+		
+</div><!-- /content -->
+<div data-role="footer" class="ui-bar" style="text-align:center;" data-position="fixed">
+	<span >© all rights reserved zvi's rentals ©</span>
+</div>
+</div><!-- /page -->
+
+
+
+
+
+</body>
+</html>
