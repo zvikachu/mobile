@@ -1,15 +1,15 @@
 $(document).ready(function(){ 
 	$("#getAddressButton").click(function(){ 
 	if(typeof(Worker) !== "undefined") {
-			//w = new Worker("webWorker.js");
+			w = new Worker("webWorker.js");
 		
-			//w.onmessage = function(event){
-			//alert (event.data);
+			
 			setTimeout(function() {
-				getAddress();
+				w.onmessage = function(event){
+				alert (event.data);
 			}, 5000);
 		
-		//};
+		};
 		
 		//w.terminate();
 		//w = undefined;
